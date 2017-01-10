@@ -47,3 +47,4 @@ Temporary Items
 .apdisk
 wp-config.php
 sftp-config.json
+/uploads/
