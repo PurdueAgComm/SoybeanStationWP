@@ -1,3 +1,4 @@
+
 <div class="row" style="margin-left:-4px;">
   <form class="form-inline" role="search" method="get" id="searchform"
       class="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">

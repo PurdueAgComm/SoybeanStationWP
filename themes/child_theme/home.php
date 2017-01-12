@@ -1,11 +1,16 @@
 <?php
 /**
  *
- * Template Name: News Home Banner Page
+ * Template Name: Home Banner Page
  *
 **/
 
 get_header(); ?>
+      <style>
+      .breadcrumb{
+       display: none;
+      }
+      </style>
 
 <div class="full-width-banner" style="background-image: url('https://dev.ag.purdue.edu/soybeanstation/wp-content/uploads/2017/01/soybean.jpg');">
   <div class="container">

@@ -7,6 +7,12 @@
 
 get_header(); ?>
 
+      <style>
+      .breadcrumb{
+       display: none;
+      }
+      </style>
+
 <div class="full-width-banner" style="background-image: url('PLACE IMAGE URL HERE - 1660 x 600');">
   <div class="container">
     <div class="col-lg-12">

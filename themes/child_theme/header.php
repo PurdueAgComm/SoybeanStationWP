@@ -3,8 +3,6 @@
 <head>
 
 
-
-
 <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
 <meta charset="utf-8"/>
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
@@ -213,3 +211,12 @@ var _gaq = _gaq || [];
     </div>
 </nav>
 
+<div class="breadcrumb">
+  <div class="container">
+    <div class="row">
+      <div id="breadcrumbs">
+          <?php the_breadcrumb(); ?>
+      </div>
+    </div>
+  </div>
+</div>

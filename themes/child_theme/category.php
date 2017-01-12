@@ -10,7 +10,8 @@ get_header(); ?>
     </div>
     <div class="maincontent col-lg-7 col-md-7 col-sm-7 right" style="margin-top: 16px;">
       <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-        <h1><?php the_title(); ?></h1>
+        <div class="singleblog">
+        <h1><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
         <p><i class="fa fa-folder" title="category"> </i> <?php the_category(' '); ?> | <em><?php the_time('l, F jS, Y'); ?></em></p>
         <div class="banner">
           <?php
@@ -21,15 +22,14 @@ get_header(); ?>
               }
           ?>
         </div>
-          <?php the_content(); ?>
           <p style="text-align: right;"><i class="fa fa-tags"></i> <?php the_tags(''); ?></p>
-
 
         <!-- <nav id="nav-single">
           <h3 class="assistive-text"><?php _e( 'Read more', 'purduetwentyfourteen' ); ?></h3>
           <span class="nav-previous"><?php previous_post_link( '%link', __( '<span class="meta-nav"><i class="fa fa-arrow-circle-left"></i></span> %title', 'purduetwentyfourteen' ) ); ?></span><br /><br />
           <span class="nav-next"><?php next_post_link( '%link', __( '%title <span class="meta-nav"><i class="fa fa-arrow-circle-right"></i></span>', 'purduetwentyfourteen' ) ); ?></span>
         </nav> -->
+        </div>
       <?php endwhile; else: ?>
         <p><?php _e('Sorry, this page does not exist.'); ?></p>
       <?php endif; ?>

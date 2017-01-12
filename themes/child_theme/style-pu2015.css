@@ -68,12 +68,15 @@ body {
     }
 }
 
+.entry-title{
+    margin-top: 20px;
+}
+
 h1 {
     padding-top: 0;
     padding-bottom: .25em;
     font-family: "Open Sans", Arial, sans-serif;
     font-weight: 700;
-    color: #b1810b;
     font-size: 2.25em;
     line-height: 1.1em;
 }
@@ -82,7 +85,6 @@ h2 {
     padding-top: 1em;
     padding-bottom: .15em;
     font-family: "Open Sans", Arial, sans-serif;
-    color: #b1810b;
     font-size: 2em;
     line-height: 1.2em;
 }
@@ -90,7 +92,6 @@ h2 {
 h3 {
     padding-top: 1em;
     font-family: "Open Sans", Arial, sans-serif;
-    color: #b1810b;
     font-size: 1.75em;
     line-height: 1.2em;
 }
@@ -122,12 +123,12 @@ h6 {
 }
 
 h1 a:link,h2 a:link,h3 a:link,h4 a:link,h5 a:link,h6 a:link {
-    color: inherit;
+    color: #a57000;
     font-weight: inherit;
 }
 
 h1 a:visited,h2 a:visited,h3 a:visited,h4 a:visited,h5 a:visited,h6 a:visited {
-    color: inherit;
+    color: #ad1f65;
     font-weight: inherit;
 }
 
@@ -186,7 +187,7 @@ big {
 }
 
 a:link {
-    color: #000;
+    color: #a57000;
     font-weight: 700;
     text-decoration: underline;
 }
@@ -951,6 +952,7 @@ h1.logotext {
 h1.logotext a {
     font-weight: normal;
     text-decoration: none;
+    color: rgb(255, 255, 255) !important;
 }
 
 @media (max-width: 1200px){

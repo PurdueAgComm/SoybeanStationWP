@@ -776,4 +776,9 @@ Version:        0.1.0
 .screen-reader-text {
   display: none;
 }
-
+.singleblog{
+    margin-bottom: 25px;
+    padding: 10px;
+    box-shadow: 2px 5px 10px rgba(0,0,0,0.5);
+    background-color: white;
+}
