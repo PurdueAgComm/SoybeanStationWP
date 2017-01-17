@@ -1,4 +1,6 @@
-<?php get_header(); ?>
+<?php
+/* Template for displaying all category posts */
+get_header(); ?>
 
       <style>
       .breadcrumb{
@@ -6,11 +8,13 @@
       }
       </style>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
+<div class="container">
+  <div class="row">
+    <div class="rightnav col-lg-2 col-md-2 col-sm-2 right">
+    </div>
 
-<?php
+    <div class="maincontent col-lg-7 col-md-7 col-sm-7 right" style="margin-top: -13px;">
+   <?php
 $s=get_search_query();
 $args = array(
                 's' =>$s
@@ -34,11 +38,11 @@ if ( $the_query->have_posts() ) {
           <p>Sorry, but nothing matched your search criteria. Please try again with some different keywords.</p>
         </div>
 <?php } ?>
+    </div>
 
-<?php get_sidebar(); ?>
-
+    <?php get_sidebar('sidenav'); ?>
+    <?php get_sidebar('sidecontent'); ?>
+  </div>
 </div>
-</div>
-</div>
-
 <?php get_footer(); ?>
+

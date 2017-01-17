@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * Template Name: Events & Presentation Template
+ * Template Name: Research Summaries
  *
 **/
 

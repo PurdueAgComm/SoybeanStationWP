@@ -1,5 +1,5 @@
 <?php
-/* Template for displaying all single posts */
+/* Template for displaying all category posts */
 get_header(); ?>
 
 <div class="container">
