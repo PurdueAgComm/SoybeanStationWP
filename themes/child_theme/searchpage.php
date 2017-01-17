@@ -7,13 +7,20 @@ Template Name: Search Page
 <?php
 get_header(); ?>
 
-<div class="wrap">
-  <div id="primary" class="content-area">
-    <main id="main" class="site-main" role="main">
+      <style>
+      .breadcrumb{
+       display: none;
+      }
+      </style>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+      <br>
 
       <?php get_search_form(); ?>
 
-    </main><!-- #main -->
+    </div><!-- #main -->
   </div><!-- #primary -->
 </div><!-- .wrap -->
 
