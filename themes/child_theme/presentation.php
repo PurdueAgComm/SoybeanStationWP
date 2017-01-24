@@ -46,7 +46,7 @@ get_header(); ?>
                 <img src="http://placehold.it/350x150&text=No Image" class="img-responsive hidden-xs">
               <?php endif; ?>
               <h5><a href="<?php echo get_permalink($recent["ID"]); ?>"><?php echo $recent["post_title"]; ?></a></h5>
-               <p class="meta-news"><i class="fa fa-calendar"></i> <?php echo get_the_date(); ?></p>
+               <p class="meta-news"><i class="fa fa-calendar"></i> <?php echo date('n-j-Y', strtotime($recent['post_date'])); ?></p>
               <p><?php echo $blurb  . "..."; ?></p>
             </div>
           <?php endforeach; ?>

@@ -45,8 +45,40 @@ $the_query = new WP_Query($args);
     while ($the_query->have_posts()) :
       $the_query->the_post();
     ?>
+           <?php
+            //This code grabs the external link name value specified in the page Custom Fields
+            $key_name = get_post_custom_values($key = 'External Link');
+            $externalurl = $key_name[0];
+
+             //This external url is not empty
+           if (isset($externalurl)) : ?>
 
 
+
+      <?php if(has_post_thumbnail()) : ?>
+        <div class="col-sm-4">
+          <a href="<?php echo $externalurl; ?>" title="<?php the_title_attribute(); ?>">
+            <?php the_post_thumbnail( array( 250, 350), array( 'class' => 'img-responsive' ) ) ?>
+          </a>
+        </div>
+      <?php else : ?>
+        <div class="col-sm-4 text-center">
+          <a href="<?php echo $externalurl; ?>" title="<?php the_title_attribute(); ?>">
+            <img width="350" height="250" src="https://dev.ag.purdue.edu/soybeanstation/wp-content/uploads/2017/01/soybeandefault.jpg" class="img-responsive wp-post-image" alt="Default Image" >
+          </a>
+        </div>
+      <?php endif; ?>
+        <div class="col-sm-8">
+          <h3 class="media-heading"><a href="<?php echo $externalurl; ?>"><?php the_title(); ?></a></h3>
+          <?php if(get_the_date()) :?>
+            <p class="meta-news"><i class="fa fa-calendar"></i> <?php echo get_the_date(); ?></p>
+          <?php endif; ?>
+          <?php the_excerpt(); ?>
+          <p><a href="<?php echo $externalurl; ?>" class="btn btn-default btn-sm btn-block">External Link &raquo;</a></p>
+        </div>
+
+
+    <?php else : ?>
       <?php if(has_post_thumbnail()) : ?>
         <div class="col-sm-4">
           <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
@@ -68,8 +100,15 @@ $the_query = new WP_Query($args);
           <?php the_excerpt(); ?>
           <p><a href="<?php the_permalink(); ?>" class="btn btn-default btn-sm btn-block">Read More &raquo;</a></p>
         </div>
+
+
+<?php endif; ?>
+
         <br style="clear:both;"><br style="clear:both;">
-    <?php endwhile;
+         <?php endwhile;?>
+
+
+    <?php
     if(function_exists('wp_bootstrap_pagination')) {
       wp_bootstrap_pagination();
     }
@@ -85,5 +124,8 @@ $the_query = new WP_Query($args);
 <?php
 //get_sidebar();
 get_footer();
+
+
+
 
 

@@ -10,7 +10,20 @@ get_header(); ?>
     </div>
     <div class="maincontent col-lg-7 col-md-7 col-sm-7 right" style="margin-top: 16px;">
       <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+        <?php
+            //This code grabs the external link name value specified in the page Custom Fields
+            $key_name = get_post_custom_values($key = 'External Link');
+            $externalurl = $key_name[0];
+
+             //If external url is not empty then display external url
+           if (isset($externalurl)) : ?>
+
+        <h1><a href="<?php echo $externalurl; ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+      <?php else : ?>
         <h1><?php the_title(); ?></h1>
+      <?php endif; ?>
+
+
         <p><i class="fa fa-folder" title="category"> </i> <?php the_category(' '); ?> | <em><?php the_time('l, F jS, Y'); ?></em></p>
         <div class="banner">
           <?php

@@ -38,7 +38,9 @@ get_header(); ?>
             ?>
             <div class="col-md-6">
               <h5> <i class="fa fa-file-pdf-o" style="margin-right: 10px;" aria-hidden="true"></i><a href="<?php echo get_permalink($recent["ID"]); ?>"><?php echo $recent["post_title"]; ?></a></h5>
-               <p class="meta-news"><i class="fa fa-calendar"></i> <?php echo get_the_date(); ?></p>
+               <p class="meta-news"><i class="fa fa-calendar"></i> <?php echo date('n-j-Y', strtotime($recent['post_date'])); ?>
+
+               </p>
               <p><?php echo $blurb  . "..."; ?></p>
             </div>
           <?php endforeach; ?>
